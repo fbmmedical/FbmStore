@@ -696,11 +696,4 @@ let renderdata = () => {
   renderBuy();
 };
 // ...................................................................
-let addProductBtn = document.getElementById("add-product-btn");
-let formAddProduct = document.querySelector(".form-add-product");
-addProductBtn.onclick = () => {
-  formAddProduct.classList.toggle("show");
-};
-clear.onclick = () => {
-  formAddProduct.classList.remove("show");
-};
+
