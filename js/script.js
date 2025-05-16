@@ -499,7 +499,7 @@ let renderDelete = (id) => {
 // ..................................................................
 let renderWhatsapp = (product) => {
   let totelPrice = 0;
-
+  let phonenumber = "+963988201797";
   let productmove = product.map((ele) => {
     totelPrice += ele.price;
     return { name: ele.title, price: ele.price };
@@ -704,23 +704,3 @@ addProductBtn.onclick = () => {
 clear.onclick = () => {
   formAddProduct.classList.remove("show");
 };
-//....................................................................
-let form = document.querySelector("#form-add-product");
-form.onsubmit = (e) => {
-  e.preventDefault();
-  let sendMassage = {
-    nameUser: YourName.value,
-    productName: ProductName.value,
-  };
-  YourName.value = "";
-  ProductName.value = "";
-  let messsageNewProduct = `hi my name is ${sendMassage.nameUser} 
-  i need this product ${sendMassage.productName}
-  `;
-  let url = "https://wa.me/" + phonenumber + "?text=" + messsageNewProduct;
-  window.open(url, "_blank").focus();
-  setTimeout(() => {
-    formAddProduct.classList.remove("show");
-  }, 1000);
-};
-// ...................................................................
