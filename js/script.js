@@ -695,12 +695,6 @@ let renderdata = () => {
   });
   renderBuy();
 };
-window.onload = () => {
-  document.querySelector(".loader").style.display = "none"; // إخفاء دائرة التحميل
-  document.querySelector(".app").style.display = "block";
-  renderdata();
-  renderText();
-};
 // ...................................................................
 let addProductBtn = document.getElementById("add-product-btn");
 let formAddProduct = document.querySelector(".form-add-product");
